@@ -5,7 +5,7 @@ const StartGame = ({ toggle }) => {
   return (
     <Container className="flex flex-wrap">
       <div className="imgSection">
-        <img src="/images/dices.png" />
+        <img src="./images/dices.png" />
       </div>
       <div className="content">
         <h1>Dice Game</h1>
