@@ -12,12 +12,10 @@ const GameStart =()=>{
   const [isStatus,setIsStatus] = useState(false)
   const [gameWin,setGameWin] =useState()
   const [score,setScore]=useState(0)
+  
    const rolingDiec=(min,max)=>{
-    //console.log(max,min,max-min,Math.floor(Math.random() * (max - min)))
-    
-    const results = Math.floor(Math.random() * (max - min) * min)
-   return results==0?1:Math.floor(Math.random() * (max - min) * min)
-   
+     console.log("rolingDiec",Math.floor(Math.random() * (max - min) + min))
+    return Math.floor(Math.random() * (max - min) + min)
   }
   const rendomDiec=()=>{
     setIsStatus(false)
@@ -25,14 +23,14 @@ const GameStart =()=>{
        return setError("Please first Select the number and try again :)")
     }
     setIsStatus(true)
-    let results = rolingDiec(1, 7)
-    results==0?results=1:rolingDiec(1, 7)
-    console.log("results is ",results)
+    const results = rolingDiec(1,7)
+    
     setUpDateDiecs(prev => results)
+    console.log(upDateDiecs)
     if(selectedNumber == results){
       setScore(prev => prev + results)
       setGameWin("Congratulations Your guess is right 👍")
-     setGameCount(prev => prev + 2)
+     gameCount>=10?setGameCount(10):setGameCount(prev => prev + 1)
      setSelectedNumber(null)
      setError("")
       setTimeout(()=>{
@@ -41,8 +39,8 @@ const GameStart =()=>{
     }else{
       setScore(prev => prev - 2)
       setGameCount(prev => prev - 1)
-    setSelectedNumber(null)
-    setError("")
+      setSelectedNumber(null)
+      setError("")
     if(gameCount===1){
        setGameOver("Game-Over because too many worng guess")
       setTimeout(()=>{

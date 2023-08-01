@@ -81,6 +81,7 @@ const Box = styled.div`
   height: 60px;
   width: 60px;
   text-align:center;
+  cursor: pointer;
   font-size: 24px;
   font-weight: 700;
   border-radius:0.8em;

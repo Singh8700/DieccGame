@@ -30,8 +30,6 @@ const MouseEvent=()=>{
     const mouseMoveFollwer=(xscale,yscale)=>{
       window.addEventListener("mousemove",(dets)=>{
         document.querySelector("#minicircle").style.transform = `translate(${dets.clientX}% ,${dets.clientY}%) scale(${xscale},${yscale})`
-      console.log(dets.clientX,dets.clientY)
-        
       })
     }
   useEffect(()=>{
@@ -54,6 +52,6 @@ const Warpper=styled.div`
   border-radius: 50%;
   background: var(--bg);
   z-index:9999;
-  transition: 0.5s;
+  transition: 0.1s;
 }
 `

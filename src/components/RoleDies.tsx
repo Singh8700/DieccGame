@@ -19,12 +19,14 @@ const Wrapper=styled.div`
 flex-direction:column;
 flex-wrap:wrap;
 margin-top:-5em;
+cursor: pointer;
 img{
   width:75%;
   object-fit:cover;
+  
 }
 .active:active{
-  animation:rolling 0.5s alternate 1;
+  animation:rolling 1s alternate infinite;
 }
 p{
   font-size:2em;
