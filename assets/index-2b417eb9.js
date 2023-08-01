@@ -65,7 +65,7 @@ Error generating stack: `+o.message+`
     border: 1px solid transparent;
     color: white;
   }
-`;const W1=({toggle:t})=>L.jsxs(H1,{className:"flex flex-wrap",children:[L.jsx("div",{className:"imgSection",children:L.jsx("img",{src:"/images/dices.png"})}),L.jsxs("div",{className:"content",children:[L.jsx("h1",{children:"Dice Game"}),L.jsx(mh,{onClick:t,children:"Play Now"})]})]}),H1=Mt.div`
+`;const W1=({toggle:t})=>L.jsxs(H1,{className:"flex flex-wrap",children:[L.jsx("div",{className:"imgSection",children:L.jsx("img",{src:"./images/dices.png"})}),L.jsxs("div",{className:"content",children:[L.jsx("h1",{children:"Dice Game"}),L.jsx(mh,{onClick:t,children:"Play Now"})]})]}),H1=Mt.div`
   width: 100vw;
   height: 100vh;
   margin: 0 auto;
