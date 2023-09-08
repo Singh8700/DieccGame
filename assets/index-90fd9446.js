@@ -217,6 +217,10 @@ flex-wrap:wrap;
   border-radius: 50%;
   background: var(--bg);
   z-index:9999;
-  transition: 0.1s;
+}
+@media(max-width:${({theme:t})=>t.media.mobile}){
+  #minicircle{
+    transition:all 0.5s ease-in;
+  }
 }
 `,av=()=>{const t={media:{tab:"780px",mobile:"660px",smobile:"480px"}};return L.jsxs(j1,{theme:t,children:[L.jsx(sv,{}),L.jsx(ey,{})]})};Ns.createRoot(document.getElementById("root")).render(L.jsx(vn.StrictMode,{children:L.jsx(av,{})}));
